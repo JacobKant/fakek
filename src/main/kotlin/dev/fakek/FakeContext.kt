@@ -1,4 +1,5 @@
 @file:Suppress("WildcardImport")
+
 package dev.fakek
 
 import com.github.javafaker.Faker
@@ -35,6 +36,7 @@ class FakeContext(private val faker: Faker = Faker.instance()) {
     private val fakerCompany by lazy { faker.company() }
     private val fakerInternet by lazy { faker.internet() }
     private val fakerName by lazy { faker.name() }
+    private val fakerDog by lazy { faker.dog() }
 
     /**
      * Provides a [FakeAddress].
@@ -100,4 +102,9 @@ class FakeContext(private val faker: Faker = Faker.instance()) {
      * Provides a [FakeUrl].
      */
     val fakeUrl by lazy { FakeUrl(fakerInternet) }
+
+    /**
+     * Provides a [FakeDog].
+     */
+    val fakeDog by lazy { FakeDog(fakerDog) }
 }

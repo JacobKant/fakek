@@ -12,3 +12,4 @@ internal typealias FakerInternet = Internet
 internal typealias FakerName = Name
 internal typealias FakerBoolean = Bool
 internal typealias FakerAncient = Ancient
+internal typealias FakerDog = Dog
