@@ -32,6 +32,7 @@ class FakeContext(private val faker: Faker = Faker.instance()) {
     private val fakerAvatar by lazy { faker.avatar() }
     private val fakerBook by lazy { faker.book() }
     private val fakerBoolean by lazy { faker.bool() }
+    private val fakerCat by lazy { faker.cat() }
     private val fakerColor by lazy { faker.color() }
     private val fakerCompany by lazy { faker.company() }
     private val fakerInternet by lazy { faker.internet() }
@@ -69,9 +70,19 @@ class FakeContext(private val faker: Faker = Faker.instance()) {
     val fakeBoolean by lazy { FakeBoolean(fakerBoolean) }
 
     /**
+     * Provides a [FakeCat].
+     */
+    val fakeCat by lazy { FakeCat(fakerCat) }
+
+    /**
      * Provides a [FakeColor].
      */
     val fakeColor by lazy { FakeColor(fakerColor) }
+
+    /**
+     * Provides a [FakeCommerce].
+     */
+    val fakeCommerce by lazy { FakeCommerce(fakeAddress, fakeCompany) }
 
     /**
      * Provides a [FakeCompany].
